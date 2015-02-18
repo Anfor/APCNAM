@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title> Ecriture une fonction multiplier</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var pays = new Array("alemania","austria","belgica","bulgaria","chipre","dinamarca","espana","estonia","finlandia","francia","grecia","hungria","irlanda","italia","letonia","lituania","luxemburgo","holanda","malta","polonia","portugal","republica checa","rumania","reino unido","eslovaquia","eslovenia","suecia");
+var n=pays.length/3;
+
+document.write("<table border=1 width=550>");
+
+for(i=0;i<n;i++)
+{
+document.write(" <tr>");
+document.write("<td>"+pays[i]+"</td>");
+document.write("<td>"+pays[i+n]+"</td>");
+document.write("<td>"+pays[i+(2*n)]+"</td>");
+
+
+document.write(" </tr>");
+
+}
+
+
+document.write("</table>");
+
+
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>
