@@ -12,7 +12,7 @@ public class Tableu {
 		
 		System.out.print("Entre numero a buscar: ");
 		Scanner sc = new Scanner(System.in);
-		
+		n=sc.nextInt();
 		int index = vector(n,tab);
 		
 		if(index<0){
