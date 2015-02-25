@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+
+<title> tabladel message-box</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style>
+#lista{
+list-style-type:none;
+
+}
+
+</style>
+<script type="text/javascript">
+
+
+var anne= new Array();
+
+anne ['janvier']='hiver';
+anne['fevrier']='hiver';
+anne ['mars']='printemps';
+anne['avril']='printemps';
+anne['mai']='printemps';
+anne['june']='été';
+anne['juillet']='été';
+anne['aout']='été';
+anne['septembre']='automnne';
+anne['octobre']='automnne';
+anne['Novembre']='automnne';
+anne['Decembre']='hiver';
+
+
+document.write("<ul id=\"lista\">");
+for(var i in anne)
+{
+	var verb=" est en ";
+	if (anne[i]=="printemps")
+	{
+		verb=" est au "
+	}
+	document.write("<li>"+i+verb+anne[i]+"</li>")
+	
+}
+document.write("</ul>");
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

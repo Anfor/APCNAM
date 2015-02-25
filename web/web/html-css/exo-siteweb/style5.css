@@ -1,0 +1,196 @@
+#page
+{
+
+padding:10px;
+width:auto;
+font-family:time;
+
+}
+header{
+
+position:relative;
+max-height:200px;
+}
+
+
+#logo
+{
+ max-width:150px;
+
+}
+a{
+ 
+ text-decoration: none;
+list-style-type: none;
+
+}
+
+
+ ul li{
+
+     display:inline;
+
+       }
+	   
+#menu1
+{
+ 
+padding-right:5px;
+
+top:-40px;
+position:absolute;
+right:20px;
+
+}
+
+#menu1 ul a{
+ color:black;
+
+}
+#menu2
+{
+background-color:#323232;
+width:98%;
+height:60px;
+display:inline-block;
+}
+
+#menu2 ul a{
+color:white;
+padding:7px;
+}
+#link {
+color:white;
+display:inline-block;
+width:50%;
+
+}
+#link ul{
+position:relative;
+top:20px;
+
+}
+	   #social
+	   { top:-10px;
+	   float:right;
+	   width:20%;
+	position:relative;
+	display:inline-block;
+	   }
+	   #social img{
+	   
+		float:right;
+	
+	   max-width:50px;
+	   
+
+	   }
+	   
+	   #silhouette img
+{
+width:100%;
+
+}
+section
+{
+border-top: 3px solid #bcbe00;	
+
+ margin-bottom:50px;
+}
+h1{
+font-size:1.8em;
+
+}
+#fleche {
+
+padding-left:10px;
+}
+	   strong{
+	   font-size:1.5em;
+	   color:#bcbe00;
+	   }
+	   
+	   #morse{
+	  
+	   text-align:center;
+	   float:right;
+	   
+	   
+	   }
+	 
+	   
+	   h2 {
+	   color:#bcbe00;
+	   
+	   }
+	   
+	   #subtitulo{
+	   padding-left:5px;
+	   width:395px;
+	   position:absolute;
+	   bottom:-717px;
+	   right:57px;
+	   font-size:1.8em;
+	   color:green;
+	   background-color:#323232;
+	   opacity:0.6;
+	   }
+
+	   
+	   footer {
+		padding:10px;
+		height:220px;
+	  background-color:#323232;
+	  color:white;
+	   
+	   
+	   }
+	   #final{
+	   
+	   border-bottom: 3px solid #bcbe00;	
+	   }
+
+	   #yo2
+	   {
+	   max-width:600px;
+	  
+	   }
+#yo{
+margin-bottom:0px;
+
+max-height:15px;
+}
+
+#mug{
+float:left;
+position:inline-block;
+
+}
+#parrafo{
+
+position:left;
+position:block;
+max-width:700px;
+
+}
+#law{
+max-width:200px;
+position:relative;
+float:right;
+
+top:-50px;
+}
+#law a{color:white;}
+#contact{
+
+float:left;
+}
+#fecha{
+max-width:200px;
+position:relative;
+float:right;
+
+right:-55px;
+}
+
+	   

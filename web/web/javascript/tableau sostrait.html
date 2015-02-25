@@ -1,0 +1,58 @@
+tableau nomme tab premier element -2 deuxieme 1 troisieme 4
+fonction sustraction argument x renvoi le resultat de la sostraction x-2 si x<=0 chaine est nombre negatif
+sinon affiche resultat
+fonction affiche appele au clic sur le bouton 
+qui affiche boites dalerte succesivement le resultat fonction sostrait apliquee au premier element, puis au dernier element, propriete lenght
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+
+<title> tabladel message-box</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<script type="text/javascript">
+
+
+var tab = new Array(-2,1,4);
+
+
+
+function afficher()
+{
+	alert(soustrait(tab[0]));
+	alert(soustrait(tab[tab.length-1]));
+	
+	
+	
+}
+
+function soustrait(x)
+{
+	var res;
+	res=x-2;
+	if(x<=0)
+	{
+	var n = "Nombre negatif";
+	return n;
+	}
+	else
+	{
+		 return res;
+	}
+	
+}
+
+
+
+</script>
+</head>
+<body>
+
+<p>cliquez sur le bouton pour lancer la fonction&nbsp;:<button onclick="afficher();">soustrait</button>
+
+</body>
+</html>
