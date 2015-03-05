@@ -8,16 +8,16 @@ public class Main {
 		
 		l.ajouterEnTete(3);
 		
-		l.afficher();
+		//l.afficher();
 		
 		l.ajouterEnTete(5);
 		
 		l.ajouterEnTete(8);
 		l.ajouterEnTete(12);
 		l.ajouterEnTete(66);
-		l.ajouterEnTete(87);
+		l.ajouterEnTete(8);
                 l.ajouterEnTete(47);
-                l.ajouterEnTete(81);
+                l.ajouterEnTete(8);
                 l.ajouterEnTete(39);
 		l.afficher();
 		
@@ -25,6 +25,11 @@ public class Main {
 		l.afficher();
 		l.supprimerALindice(8);
 		l.afficher();
+		l.taille();
+		System.out.println("taille= "+l.taille());
+		
+		System.out.println("la valeur demandee est  "+l.compte(8)+" fois");
+
 		
 	
 	}

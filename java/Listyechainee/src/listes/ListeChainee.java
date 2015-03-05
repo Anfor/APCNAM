@@ -62,7 +62,27 @@ public class ListeChainee {
 		System.out.println(res);
 
 	}
+	
+	public int compte (int v) {
+		
+		Noeud p = this.noeud;
+		int i=0;
+		while(p!=null){	
+			
+			
+			if(v==p.valeur){
+				
+				i++;
+				
+			}
+			
+		p = p.suivant;
+		
+		}
+		return i;
+	}
 
+	
 	public boolean estVide() {
 		
 		Noeud p = this.noeud;

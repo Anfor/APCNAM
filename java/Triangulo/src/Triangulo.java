@@ -12,7 +12,7 @@ public class Triangulo {
 
 		 Scanner lector = new Scanner(System.in);
 
-		 System.out.print("Ingrese un número: ");
+		 System.out.print("Ingrese un número de lineas: ");
 		 n = lector.nextInt();
 		int m=n;
 		 for (int i = 0; i <= n; i++){

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+mois 30 jours temp aleatoire entre 7 et 16 , pour chacune de ces journees
+
+afficher temps 4 par ligne
+
+claculer et afficher la moyenne 
+precision au centime de degree.
+<head>
+
+
+<title> tabladel message-box</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+
+var n;
+var i=1;
+n=i;
+var p=1;
+var t1,t2,t3,t4;
+var j;
+var mois = new Array();
+
+for (j=1;j<=30;j++)
+{
+
+	mois[j]=t1,t2,t3,t4;
+	
+	
+}
+
+
+alert(mois[2]);
+
+
+document.write("<table border=1 width=550>");
+document.write(" <tr>");
+
+
+for(i=1;i<=30;i++)
+{
+ t1=Math.floor(Math.random() * (16 - 7 + 1)) + 7;
+ t2=Math.floor(Math.random() * (16 - 7 + 1)) + 7;
+ t3=Math.floor(Math.random() * (16 - 7 + 1)) + 7;
+ t4=Math.floor(Math.random() * (16 - 7 + 1)) + 7;  
+
+document.write("<td>"+mois[i]+": "+t1 +"°C "+t2 +"°C "+t3 +"°C "+t4 +"°C "+"</td>");
+
+n=n+10;
+
+if(i%3==0){
+
+	document.write("</tr>");
+	document.write("<tr>");
+	
+	n=i-p;
+	p=p+2;
+	
+}
+}
+
+document.write("</table>");
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

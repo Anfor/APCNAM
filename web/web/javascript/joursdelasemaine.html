@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+
+<title>Objet date</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+
+function fecha()
+{
+	var date = new Date();	
+	//var dia = new Date();
+	var j = date.getDate();
+	//var an = new Date();
+	var a = date.getFullYear();
+	//var heur= new Date();
+	var h = date.getHours();
+	
+	
+	switch (date.getDay())
+	{
+		case 0 : document.write("<p>On est en Dimanche "+j+" "+a+" "+h+" heures "+"</p>");
+		break;
+		
+		case 1 : document.write("<p>On est en Lundi "+j+" "+a+" "+h+" heures "+" </p>");
+		break;
+		case 2 : document.write("<p>On est en Mardi "+j+" "+a+" "+h+" heures "+" </p>");
+		break;
+		case 3 : document.write("<p>On est en Mercredi "+j+" "+a+" "+h+" heures "+" </p>");
+		break;
+		case 4 : document.write("<p>On est en Jeudi "+j+" "+a+" "+h+" heures "+" </p>");
+		break;
+		case 5 : document.write("<p>On est en Vendredi "+j+" "+a+" "+h+" heures "+" </p>");
+		break;
+		case 6 : document.write("<p>On est en Samedi "+j+" "+a+" "+h+" heures "+" </p>");
+		break;
+		default: document.write("jour inexistent ");
+		break;
+		
+		
+		
+		
+	}
+}
+
+
+</script>
+</head>
+<body>
+
+<p>cliquez sur le bouton pour lancer la fonction&nbsp;:<button onclick="fecha();">date</button></p>
+
+</body>
+</html>
