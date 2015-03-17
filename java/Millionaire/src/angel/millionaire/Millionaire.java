@@ -36,10 +36,11 @@ public class Millionaire {
  		
 		switch (block){
 		
-		case 1:   String [][][] preg1= {{
+		case 1:   String [][][] preg1= {
+				    {
 					
 	 				
-	 				{"Au Moyen-Âge, comment appelait-on les villages fortifiés ?",
+	 				{   "Au Moyen-Âge, comment appelait-on les villages fortifiés ?",
 	 					"Dans quel film un couple en croisière va-t-il recueillir un naufragé qui va les terrifier ?",
 	 					"Quel acteur français avait le premier rôle dans le film de Luchino Visconti \"Le Guépard\" ?",
 	 					"Quel film à succès a réuni sur les écrans Sean Connery et Christophe Lambert ?",
@@ -75,12 +76,13 @@ public class Millionaire {
 	 						"a- L'unité thermoptim\nb- L'unité scoville\nc- L'unité cherit\nd- L'unité hauy\ne- Quitter",
 	 						"a- Bonne\nb- Bne\nc- Bone\nd- Bnne\ne- Quitter",
 	 						"a- Les vins du Languedoc\nb- Les vins du Bordelais\nc- Les vins du Beaujolais\nd- Les vins de Bourgogne\ne- Quitter",
-	 						"a- 2,3\nb- 4,5\nc- 5,3\nd- 7\ne- Quitter"}},
+	 						"a- 2,3\nb- 4,5\nc- 5,3\nd- 7\ne- Quitter"}
+	 					    },
 	 						{
-	 							{"b","a","d","a","c","c","a","c","b","c","b","a","b","d","b","a","d","a"}
+	 						{"b","a","d","a","c","c","a","c","b","c","b","a","b","d","b","a","d","a"}
 	 				
 						}
-					};
+					    };
 		
 					tour(preg1);
 					break;
@@ -90,7 +92,7 @@ public class Millionaire {
 		
 			
 				
-				{"Comment est également appelée la \" Transat Jacques Vabre \" ?",
+				{   "Comment est également appelée la \" Transat Jacques Vabre \" ?",
 					"Quel nom porte le logiciel de traitement de texte mis au point par Microsoft ?",
 					"Quel pays a pour capitale Katmandou ?",
 					"À quel réalisateur français doit-on \"Le Corniaud\" ou \"La Grande Vadrouille\" ?",
@@ -108,7 +110,7 @@ public class Millionaire {
 					"Comment se nommait la première machine à calculer portable ?",
 					"Depuis quelle année le 1er mai est-il férié en France ?",
 					"A quelle étendue d'eau le morceau \"Smoke on the water\" de Deep Purple fait-il allusion ?"},
-			{"a- Route du rhum\nb- Vendée Globe\nc- Route du café\nd- Trophée du rhum",
+			     {      "a- Route du rhum\nb- Vendée Globe\nc- Route du café\nd- Trophée du rhum",
 						"a- Access\nb- Word\nc- Excel\nd- PowerPoint",
 						"a- Le Népal\n b- Le Tibet\n c- La Corée du Sud\n d- Le Pakistan",
 						"a- Patrice Lefebvre\nb- Claude Zidi\nc- Patrice Leconte\nd-  Gérard Oury\ne- Quitter",
@@ -125,8 +127,10 @@ public class Millionaire {
 						"a- Novartis\nb- Merck\nc- Pfizer\nd- Sanofi-Aventis\ne- Quitter",
 						"a- La edita\nb- La curta\nc- La venta\nd- La lista\ne- Quitter",
 						"a- 1918\nb- 1936\nc- 1941\nd- 1957\ne- Quitter",
-						"a- Le lac Léman\nb- Le lac Titicaca\nc- Le lac Victoria\nd- Le loch ness\ne- Quitter"}},{
-			{"c","b","a","d","a","c","c","a","c","b","c","b","a","d","c","b","c","a"}
+						"a- Le lac Léman\nb- Le lac Titicaca\nc- Le lac Victoria\nd- Le loch ness\ne- Quitter"} 
+					    },
+						{
+			            {"c","b","a","d","a","c","c","a","c","b","c","b","a","d","c","b","c","a"}
 				
 				}
 			}; 
@@ -136,63 +140,64 @@ public class Millionaire {
 					
 		case 3: String [][][]  preg3={
 				{
-					{"Quelle est la plus petite unité de mémoire utilisable sur un ordinateur ?",
-			"Quel insecte appelle-t-on aussi \" la bête à bon dieu \" ?",
-			"Qui fut le premier européen à arriver aux Philippines ?",
-			"Qui joua le rôle de Donna Martin dans la série télévisée \"Beverly Hills 90210\"?",
-			"Combien de temps dure le mandat du président des États-Unis ?",
-			"Dans quel pays se trouve le circuit automobile de Zandvoort ?",
-			"Quel roman George Orwell a-t-il écrit en 1948 ?",
-			"Dans quelle ville se trouve la fontaine de Trevi ?",
-			"En quoi un nihiliste croit-il ?",
-			"Avec quel autre animal vit généralement une oie ?",
-			"Quelle est la plus grande tortue marine connue à ce jour ?",
-			"De quelle comédie musicale font partie les Pink Ladies ?",
-			"Dans quoi vit le rat des moissons ?",
-			"Un ouvrage permettant à un véhicule de surmonter une étendue infranchissable est ?",
-			"Le tournesol \"suit\" le soleil grâce à un phénomène nommé ?",
-			"La clémentine est un croisement entre quelle variétés ?",
-			"Une abeille danse en rond pour prévenir ses congénères qu'elle a trouvé de la nourriture à quelle distance de la ruche ?",
-			"Le didgeridoo est un instrument qui fait partie de quelle famille ?"},
-			{"a- Le byte\nb- Le mega\nc- Le bit\nd- Le giga",
-			"a- La luciole\nb- La coccinelle\nc- Le scarabée\nd- La libellule",
-			"a- Magellan\nb- Christophe Colomb\nc- Vasco de Gama\nd- Mauperthuis",
-			"a- Carol Potter\nb- Jenny Garth\nc- Tiffany Amber Thiessen\nd-  Tori Spelling\ne- Quitter",
-			"a- 4 ans\nb- 7 ans\nc- 5 ans\nd- 6 ans\ne- Quitter",
-			"a- La Belgique\nb- La Suisse\nc- Les Pays-Bas\nd- La France\ne- Quitter",
-			"a- 2001\nb- 2010\nc- 1984\nd- 1948\ne- Quitter",
-			"a- Rome\nb- Venise\nc- Barcelone\nd- Seville\ne- Quitter",
-			"a- En la chance\nb- En tout\nc- En rien\nd- En lui-même\ne- Quitter",
-			"a- Le canard\nb- Le jars\nc- Le cygne\nd- La poule\ne- Quitter",
-			"a- La tortue franche\nb- La tortue ninja\nc- La tortue luth\nd- La tortue argneuse\ne- Quitter",
-			"a- Save the Last Dance\nb- Grease\nc- West Side Story\nd- Moulin Rouge\ne- Quitter",
-			"a- Dans un nid\nb- Dans une tannière\nc- Dans un antre\nd- Dans un tronc creux\ne- Quitter",
-			"a- Un aqueduc\nb- Une passerelle\nc- Une buse\nd- Un viaduc\ne- Quitter",
-			"a- Le phototactisme\nb- Le photochromisme\nc- Le photopériodisme\nd- Le phototropisme\ne- Quitter",
-			"a- Un citron et une orange\nb-  Une mandarine et un citron\nc- Une mandarine et une orange\nd- Un citron et Une mandarine\ne- Quitter",
-			"a- 15 mètres\nb- 50 mètres\nc- 100 mètres\nd- 250 mètres\ne- Quitter",
-			"a- des percussions\nb- des vents\nc- des cuivres\nd- des bois\ne- Quitter"}
+					
+				{"Quelle est la plus petite unité de mémoire utilisable sur un ordinateur ?",
+			     "Quel insecte appelle-t-on aussi \" la bête à bon dieu \" ?",
+			     "Qui fut le premier européen à arriver aux Philippines ?",
+			     "Qui joua le rôle de Donna Martin dans la série télévisée \"Beverly Hills 90210\"?",
+			     "Combien de temps dure le mandat du président des États-Unis ?",
+			     "Dans quel pays se trouve le circuit automobile de Zandvoort ?",
+			     "Quel roman George Orwell a-t-il écrit en 1948 ?",
+			     "Dans quelle ville se trouve la fontaine de Trevi ?",
+			     "En quoi un nihiliste croit-il ?",
+			     "Avec quel autre animal vit généralement une oie ?",
+			     "Quelle est la plus grande tortue marine connue à ce jour ?",
+			     "De quelle comédie musicale font partie les Pink Ladies ?",
+			     "Dans quoi vit le rat des moissons ?",
+				 "Un ouvrage permettant à un véhicule de surmonter une étendue infranchissable est ?",
+				 "Le tournesol \"suit\" le soleil grâce à un phénomène nommé ?",
+				 "La clémentine est un croisement entre quelle variétés ?",
+				 "Une abeille danse en rond pour prévenir ses congénères qu'elle a trouvé de la nourriture à quelle distance de la ruche ?",
+				 "Le didgeridoo est un instrument qui fait partie de quelle famille ?"},
+			{	 "a- Le byte\nb- Le mega\nc- Le bit\nd- Le giga",
+				 "a- La luciole\nb- La coccinelle\nc- Le scarabée\nd- La libellule",
+				 "a- Magellan\nb- Christophe Colomb\nc- Vasco de Gama\nd- Mauperthuis",
+				 "a- Carol Potter\nb- Jenny Garth\nc- Tiffany Amber Thiessen\nd-  Tori Spelling\ne- Quitter",
+				 "a- 4 ans\nb- 7 ans\nc- 5 ans\nd- 6 ans\ne- Quitter",
+				 "a- La Belgique\nb- La Suisse\nc- Les Pays-Bas\nd- La France\ne- Quitter",
+				 "a- 2001\nb- 2010\nc- 1984\nd- 1948\ne- Quitter",
+				 "a- Rome\nb- Venise\nc- Barcelone\nd- Seville\ne- Quitter",
+				 "a- En la chance\nb- En tout\nc- En rien\nd- En lui-même\ne- Quitter",
+				 "a- Le canard\nb- Le jars\nc- Le cygne\nd- La poule\ne- Quitter",
+				 "a- La tortue franche\nb- La tortue ninja\nc- La tortue luth\nd- La tortue argneuse\ne- Quitter",
+				 "a- Save the Last Dance\nb- Grease\nc- West Side Story\nd- Moulin Rouge\ne- Quitter",
+				 "a- Dans un nid\nb- Dans une tannière\nc- Dans un antre\nd- Dans un tronc creux\ne- Quitter",
+				 "a- Un aqueduc\nb- Une passerelle\nc- Une buse\nd- Un viaduc\ne- Quitter",
+				 "a- Le phototactisme\nb- Le photochromisme\nc- Le photopériodisme\nd- Le phototropisme\ne- Quitter",
+				 "a- Un citron et une orange\nb-  Une mandarine et un citron\nc- Une mandarine et une orange\nd- Un citron et Une mandarine\ne- Quitter",
+				 "a- 15 mètres\nb- 50 mètres\nc- 100 mètres\nd- 250 mètres\ne- Quitter",
+				 "a- des percussions\nb- des vents\nc- des cuivres\nd- des bois\ne- Quitter"}
 			
-		},			
+				},			
 				
-		{
-						{"c","c","a","d","a","c","c","a","c","b","c","b","a","d","d","c","a","c"}
+				{
+				 {"c","c","a","d","a","c","c","a","c","b","c","b","a","d","d","c","a","c"}
 				
 				}
-			};
+				};
 	
 					tour(preg3);	
 				
 			
-		default:    System.out.println("error recomenzamos");
+		default:    System.out.println("Erreur on va recommencer");
 							
 						comenzar();								
-		}
+				}
 		
 				
 	 			
 		
-		  }
+ 				}
 	
 		
 	 		
@@ -252,7 +257,8 @@ public class Millionaire {
 		return opcion;
 		
 		
-	}
+     	}
+     
      /**
       * 
       * 
@@ -269,7 +275,7 @@ public class Millionaire {
     	 
     	 
     	 return (respuesta==verificacion);
-     }
+     	}
     
      /**
       * 
@@ -281,7 +287,7 @@ public class Millionaire {
     	 System.out.printf("BRAVO!! %s vous avez acerté, vous avez gagné %d euros por l'instance.\n\n",nom,cantidad[montant]);
     	 montant=montant+1;
     	
-     }
+     	}
 
      /**
       * 
