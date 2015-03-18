@@ -2,9 +2,10 @@ package angel.millionaire;
 
 import java.util.Scanner;
 /**
- * 
- * 
- * 
+ * @param
+ * @return
+ * @throws  
+ * @version 2.3v
  * @author ANGEL
  *
  */
@@ -25,10 +26,14 @@ public class Millionaire {
  	 *  un tableau avec les questions, les réponses et les solutions,
  	 *  par rapport à le nombre entier,  qui reçoit comme paramètre 
 	 * 
+	 *
+	 *
 	 * 
-	 * 
+	 * @throws  si reentre un nombre different de les cas considerés, le default reinitialise la methode.
+	 * @author ANGEL
+	 * @version 2.3v
 	 * @param block
-	 * @return
+	 * @return void
 	 */
  	static void preguntas(int block){
  		
@@ -36,7 +41,7 @@ public class Millionaire {
  		
 		switch (block){
 		
-		case 1:   String [][][] preg1= {
+		case 1:   String [][][] preg1= {	// String qui stocke les questoins, reponses et verifications.
 				    {
 					
 	 				
@@ -83,11 +88,11 @@ public class Millionaire {
 	 				
 						}
 					    };
-		
+			
 					tour(preg1);
 					break;
 					
-		case 2:   String [][][] preg2={
+		case 2:   String [][][] preg2={		// String qui stocke les questoins, reponses et verifications.
 				{
 		
 			
@@ -134,11 +139,11 @@ public class Millionaire {
 				
 				}
 			}; 
-	
+		
 					tour(preg2);		 
 					break;
 					
-		case 3: String [][][]  preg3={
+		case 3: String [][][]  preg3={		// String qui stocke les questoins, reponses et verifications.
 				{
 					
 				{"Quelle est la plus petite unité de mémoire utilisable sur un ordinateur ?",
@@ -185,7 +190,7 @@ public class Millionaire {
 				
 				}
 				};
-	
+		
 					tour(preg3);	
 				
 			
@@ -198,17 +203,101 @@ public class Millionaire {
 	 			
 		
  				}
-	
+ 	/**
+ 	 * méthode qui permettre choisir le mode de jeu
+ 	 * 
+ 	 * @throws  si reentre un nombre different de les cas considerés, le default reinitialise la methode.
+ 	 * @author ANGEL
+ 	 * @version 2.3v
+ 	 * @param void
+ 	 * @return void
+ 	 */
+ 		static void menu(){
+ 			
+ 			int opt;  // pour choisir le mode de jeu
+ 			System.out.print("Bonjour, entrez votre nom pour jouer: ");
+ 			Scanner sc = new Scanner(System.in);
+ 			nom=sc.nextLine();
+ 			
+ 			System.out.println("Voulez vous jouer avec nos questions  ou vous voulez ecrire les vos? ");
+ 			System.out.println("1- Vos questions.\n2- Nos questions.");
+ 			Scanner sco = new Scanner(System.in);
+ 			opt=sco.nextInt();
+ 			
+ 			switch (opt) {
+ 			
+			case 1:		test();
+				
+				break;
+				
+			case 2: 	comenzar();
+						
+
+			default: 	System.out.println("Erreur repetez");
+						menu();
+				break;
+			}
+ 			
+ 			
+ 		}
+ 		
+	/**
+	 * méthode qui permettre reentrer les valeurs sur un tableau est continuer le jeu avec.
+	 * @throws  Il faut suivre les instructions et n'oubliers pas reentrer
+	 * la letre des reponses correctes
+	 * @author ANGEL
+	 * @version 2.3v
+	 * @param void
+	 * @return void
+	 */
+		static void test(){
 		
-	 		
+		
+	
+		System.out.println("Combien de questions voulez vous rajouter?");
+		Scanner sctam = new Scanner(System.in);
+		String tam1=sctam.nextLine();
+		int tam=Integer.parseInt(tam1);
+		String [][][] preg4= new String[2][2][tam]; // array pour stocker les questions,reponses et verifications
+		
+		int indice=0;	//pour placer a chaque indice
+			while(indice<tam){
+				
+				System.out.println("Entrez la question: ");
+				Scanner sctp = new Scanner(System.in);
+				preg4[0][0][indice]=sctp.nextLine();//on garde la question
+				
+				System.out.println("Entrez les reponses selon modele svp: ");
+				System.out.println("a- Tour b- Bastide c- Château fort d- Rempart");
+				System.out.println("à partir de la troisieme question rajouter e- Quitter");
+				Scanner sctr = new Scanner(System.in);
+				preg4[0][1][indice]=sctr.nextLine();//on garde les reponses
+				
+				System.out.println("Entrez la reponses correcte selon modele svp: ");
+				System.out.println("a ou b ou c ou d ou e");
+				Scanner sctv = new Scanner(System.in);
+				preg4[1][0][indice]=sctv.nextLine();//on garde la reponse correcte
+				
+				indice++;
+				
+				
+			}
+			
+			
+			tour (preg4);// on commence le jeu
+		}
 	
 	/**
 	 *  méthode qui commence le jeu en appelant la méthode preguntas
-	 *	et le envoi un entier qui génère aléatoirement, 
-	 *	il assigne aussi  le nom de l'utilisateur
-	 * 
-	 * 
-	 * @return
+	 *	et le envoi un entier qui génère aléatoirement. 
+	 *	
+	 *
+	 *
+	 * @throws c'est un methode automatique, il ne doit pas posser des problemes
+	 * @author ANGEL
+	 * @version 2.3v
+	 * @param void
+	 * @return void
 	 */
 	static void  comenzar() {
 		
@@ -216,18 +305,14 @@ public class Millionaire {
 		int blokant=block;/*pour garder la valeur si l'utilisateur il veu recomencer,
 		ne repeter pas le block de questions*/ 
 		
-		
-		System.out.print("Bonjour, entrez votre nom pour jouer: ");
-		Scanner sc = new Scanner(System.in);
-		nom=sc.nextLine();
-		
+	
 		
 		do {
-			block=(int)(Math.random()*3 + 1);
+			block=(int)(Math.random()*3 + 1);//genere le nombre aleatoire pour choisir le block de questions
 				
 		} while (blokant==block);
 			
-		preguntas(block);
+		preguntas(block);//comence a faires les questions
 		
 		
 	}
@@ -235,8 +320,12 @@ public class Millionaire {
 	/**
 	 *  méthode qui retourne le caractère de la réponse et qui reçoit comme
      *  paramètre deux chaines de caractères avec la question et la réponse choisi
+     *  
+	 * @throws si le utilisateur rentre une option differente a les exposes, 
+	 * on gere dans la methode tour.
 	 * 
-	 * 
+	 * @author ANGEL
+	 * @version 2.3v
 	 * @param pregunta
 	 * @param respuesta
 	 * @return
@@ -244,10 +333,12 @@ public class Millionaire {
 	
      static char preguntar(String pregunta, String respuesta){
     	
+    	 char opcion; //stocke l'option choisi
+    	 
 		
 		System.out.printf("On va avec la question numero %d\n\n",nquestion);
 		
-		char opcion;
+		
 		System.out.println(pregunta);
 		System.out.println(respuesta);
 		Scanner sca = new Scanner(System.in);
@@ -264,10 +355,13 @@ public class Millionaire {
       * 
       *   méthode qui retourne un booléen vrai si la réponse est correcte ou faux au contraire,
       *	 	Il reçoit deux caractère, un la réponse choisi autre la réponse correcte
-      * 
+      *
+      * @throws c'est un methode automatique, il ne doit pas posser des problemes
+      * @author ANGEL
+      * @version 2.3v
       * @param respuesta
       * @param verificacion
-      * @return
+      * @return void
       */
      
      static boolean verificar(char respuesta,char verificacion){
@@ -278,7 +372,12 @@ public class Millionaire {
     
      /**
       *  méthode qu'on appelle si on réussit la réponse
-      * 
+      *  
+      * @throws c'est un methode automatique, il ne doit pas posser des problemes 
+      * @author ANGEL 
+      * @version 2.3v
+      * @param respuesta
+      * @return void
       */
      static void bravo(){
     	
@@ -290,7 +389,12 @@ public class Millionaire {
 
      /**
       *  méthode qu'on appelle si on gagne le jeu, et permettre recommencer si on veux
-      * 
+      * @throws si le utilisateur rentre une option differente a les exposes,
+      * on recomence la methode.
+      * @author ANGEL 
+      * @version 2.3v
+      * @param void
+      * @return void
       */
      static void ganador(){
     	
@@ -298,12 +402,12 @@ public class Millionaire {
     	 System.out.printf("Felicitations %s!, vous avez gagné le concour et avec lui %d euros  \n",nom,cantidad[17]);
     	 System.out.print("vous voulez recomencer?\no-Pour oui\nn-Pour non\n");
     	 Scanner scc = new Scanner(System.in);
-    	 char eleccion =scc.next().charAt(0);
+    	 char eleccion =scc.next().charAt(0);//stocke l'election de l'utilisateur pur continuer ou pas
     	 
-    	while((eleccion!='o')|(eleccion!='n')){
+    	while((eleccion!='o')|(eleccion!='n')){//on recomence si la reponse n'est pas correcte
     			if (eleccion=='o'){
     		
-    				comenzar();
+    				menu();
     				}
     	 else if (eleccion=='n') {
     		 
@@ -333,8 +437,13 @@ public class Millionaire {
     
      /**
       * méthode qui permettre dire au revoir
-      *   et savoir la quantité gagnée avant quitter volontairement le jeu 
-      * 
+      *   et savoir la quantité gagnée avant quitter volontairement le jeu.
+      *   
+      * @throws c'est un methode automatique, il ne doit pas posser des problemes
+      * @author ANGEL 
+      * @version 2.3v
+      * @param void
+      * @return void 
       */
      static void abandonar() {
     	 
@@ -347,6 +456,11 @@ public class Millionaire {
       *  méthode qui permettre dire au revoir et savoir la quantité gagnée
       *    avant quitter, par rapport au palier si on a échoué le jeu 
       *
+      * @throws c'est un methode automatique, il ne doit pas posser des problemes. 
+      * @author ANGEL 
+      * @version 2.3v
+      * @param void
+      * @return void 
       */
      static void eliminado(){
     	
@@ -412,17 +526,24 @@ public class Millionaire {
     *	  et avec la réponse appelle le méthode verificar pour vérifier la réponse
     *	  Il fait la gestion des méthodes abandonar, pour quitter et eliminado si on a échoue,
     *	  ou bravo ou ganador si on réussit la question
-    * 
-    * 
+    *
+    *@throws c'est un methode qui gere les questions et les reponses, si elles sont mal saisies
+    *on recomence.
+    * @author ANGEL 
+    * @version 2.3v
     * @param bloque
+    * @return void 
+    * 
+    * 
     */
      static void tour(String bloque[][][]){
     	
     	 
-    	 	nquestion=1;
+    	 	nquestion=1;//on commence pour la question 1.
     	 	System.out.printf("\n\n%s, On va commencer !!",nom);
     		System.out.println("\n\n");
-    		while (nquestion!=19)
+    		
+    		while (nquestion<=bloque[0][1].length)//on parcoiur jusqu'a la fin du tableau
     		{	
     			String pregunta=bloque[0][0][nquestion-1];
     			String respuesta=bloque[0][1][nquestion-1];
@@ -432,7 +553,7 @@ public class Millionaire {
     			
     			
     			
-    			if((nquestion >=3) & (opcion=='e')){
+    			if((nquestion >=3) & (opcion=='e')){ // si la question est correcte y la option aussi, on quit le jeu
     				
     				abandonar();
     		//methode abandonar
@@ -442,24 +563,24 @@ public class Millionaire {
     			if ((opcion=='a')|(opcion=='b')|(opcion=='c')|(opcion=='d')){
     				
     				if(verificar(opcion,verificacion)){
-    					if (nquestion==18){
+    					if (nquestion==bloque[0][1].length){  // si est la derniere question on appelle la methode ganador
         					
         					
         					ganador();
         					break;
         				}
     					
-    					bravo();
+    					bravo();// si n'est pas la derniere question on appelle la methode bravo
     					nquestion++;
     							}
-    					else {
+    					else {	// si l'option n'est pas correcte on appelle eliminado pour finir.
 							eliminado();
 						}
     				
     				
     			}
     						
-    			else if ((opcion!='a')|(opcion!='b')|(opcion!='c')|(opcion!='d')) {
+    			else if ((opcion!='a')|(opcion!='b')|(opcion!='c')|(opcion!='d')) {// si la reponse est mal saisi, on refait la question.
     				
     				System.out.println("Reponse mal saisi, repetez");
     				preguntar(pregunta,respuesta);
@@ -480,7 +601,7 @@ public class Millionaire {
 	public static void main(String[] args) {
 		
 		
-		comenzar();
+		menu();
 	
 	}
 }
