@@ -21,7 +21,9 @@ public class Millionaire {
 	
 	
 	/**
-	 * 
+	 * méthode qui appelle à la méthode tour et lui passe comme paramètre
+ 	 *  un tableau avec les questions, les réponses et les solutions,
+ 	 *  par rapport à le nombre entier,  qui reçoit comme paramètre 
 	 * 
 	 * 
 	 * 
@@ -29,9 +31,7 @@ public class Millionaire {
 	 * @return
 	 */
  	static void preguntas(int block){
- 		/*méthode qui appelle à la méthode tour et lui passe comme paramètre
- 		 *  un tableau avec les questions, les réponses et les solutions,
- 		 *   par rapport à le nombre entier,  qui reçoit comme paramètre */
+ 		
 
  		
 		switch (block){
@@ -203,17 +203,18 @@ public class Millionaire {
 	 		
 	
 	/**
-	 * 
+	 *  méthode qui commence le jeu en appelant la méthode preguntas
+	 *	et le envoi un entier qui génère aléatoirement, 
+	 *	il assigne aussi  le nom de l'utilisateur
 	 * 
 	 * 
 	 * @return
 	 */
 	static void  comenzar() {
-		/*  méthode qui commence le jeu en appelant la méthode preguntas
-		 *  et le envoi un entier qui génère aléatoirement, 
-		 *  il assigne aussi  le nom de l'utilisateur*/
 		
-		int blokant=block;
+		
+		int blokant=block;/*pour garder la valeur si l'utilisateur il veu recomencer,
+		ne repeter pas le block de questions*/ 
 		
 		
 		System.out.print("Bonjour, entrez votre nom pour jouer: ");
@@ -232,7 +233,8 @@ public class Millionaire {
 	}
 	
 	/**
-	 * 
+	 *  méthode qui retourne le caractère de la réponse et qui reçoit comme
+     *  paramètre deux chaines de caractères avec la question et la réponse choisi
 	 * 
 	 * 
 	 * @param pregunta
@@ -241,8 +243,7 @@ public class Millionaire {
 	 */
 	
      static char preguntar(String pregunta, String respuesta){
-    	 /* méthode qui retourne le caractère de la réponse et qui reçoit comme
-    	  *  paramètre deux chaines de caractères avec la question et la réponse choisi*/
+    	
 		
 		System.out.printf("On va avec la question numero %d\n\n",nquestion);
 		
@@ -261,7 +262,8 @@ public class Millionaire {
      
      /**
       * 
-      * 
+      *   méthode qui retourne un booléen vrai si la réponse est correcte ou faux au contraire,
+      *	 	Il reçoit deux caractère, un la réponse choisi autre la réponse correcte
       * 
       * @param respuesta
       * @param verificacion
@@ -269,20 +271,17 @@ public class Millionaire {
       */
      
      static boolean verificar(char respuesta,char verificacion){
-    	 /* méthode qui retourne un booléen vrai si la réponse est correcte ou faux au contraire,
-    	 *	Il reçoit deux caractère, un la réponse choisi autre la réponse correcte*/
-
-    	 
+    	
     	 
     	 return (respuesta==verificacion);
      	}
     
      /**
-      * 
+      *  méthode qu'on appelle si on réussit la réponse
       * 
       */
      static void bravo(){
-    	 /*méthode qu'on appelle si on réussit la réponse*/ 
+    	
     	 
     	 System.out.printf("BRAVO!! %s vous avez acerté, vous avez gagné %d euros por l'instance.\n\n",nom,cantidad[montant]);
     	 montant=montant+1;
@@ -290,11 +289,11 @@ public class Millionaire {
      	}
 
      /**
-      * 
+      *  méthode qu'on appelle si on gagne le jeu, et permettre recommencer si on veux
       * 
       */
      static void ganador(){
-    	 /*méthode qu'on appelle si on gagne le jeu, et permettre recommencer si on veux*/
+    	
     	 
     	 System.out.printf("Felicitations %s!, vous avez gagné le concour et avec lui %d euros  \n",nom,cantidad[17]);
     	 System.out.print("vous voulez recomencer?\no-Pour oui\nn-Pour non\n");
@@ -333,24 +332,24 @@ public class Millionaire {
      }
     
      /**
-      * 
+      * méthode qui permettre dire au revoir
+      *   et savoir la quantité gagnée avant quitter volontairement le jeu 
       * 
       */
      static void abandonar() {
-    	 /*méthode qui permettre dire au revoir
-    	  *  et savoir la quantité gagnée avant quitter volontairement le jeu */
+    	 
     	 
     	 System.out.printf("Merci d'avoir joué, vous avez gagné %d euros",cantidad[montant-1]);
     	 System.exit(1);
     	 
      }
      /**
-      * 
-      * 
+      *  méthode qui permettre dire au revoir et savoir la quantité gagnée
+      *    avant quitter, par rapport au palier si on a échoué le jeu 
+      *
       */
      static void eliminado(){
-    	 /*méthode qui permettre dire au revoir et savoir la quantité gagnée
-    	  *  avant quitter, par rapport au palier si on a échoué le jeu */
+    	
     	 
     	 if (nquestion<6){
     		 System.out.println("Desolé, reponse incorrecte,\nvous avez perdu tout, à la prochaine. ");
@@ -408,17 +407,17 @@ public class Millionaire {
      }
    
      /**
-    * 
+    *   méthode qui reçoit le tableau des questions et réponses et appelle 
+    *	  le méthode preguntar pour faire des questions, 
+    *	  et avec la réponse appelle le méthode verificar pour vérifier la réponse
+    *	  Il fait la gestion des méthodes abandonar, pour quitter et eliminado si on a échoue,
+    *	  ou bravo ou ganador si on réussit la question
     * 
     * 
     * @param bloque
     */
      static void tour(String bloque[][][]){
-    	 /* méthode qui reçoit le tableau des questions et réponses et appelle 
-    	  * le méthode preguntar pour faire des questions, 
-    	  * et avec la réponse appelle le méthode verificar pour vérifier la réponse
-    	  * Il fait la gestion des méthodes abandonar, pour quitter et eliminado si on a échoue,
-    	  *  ou bravo ou ganador si on réussit la question*/
+    	
     	 
     	 	nquestion=1;
     	 	System.out.printf("\n\n%s, On va commencer !!",nom);
@@ -436,7 +435,7 @@ public class Millionaire {
     			if((nquestion >=3) & (opcion=='e')){
     				
     				abandonar();
-    		//metodo abandonar
+    		//methode abandonar
     		}
     				
     				
@@ -473,13 +472,13 @@ public class Millionaire {
      
      
      /**
-      * 
+      * on utilise la méthode principal pour commencer le jeu
       * 
       * @param args
       */
      
 	public static void main(String[] args) {
-		/* on utilise la méthode principal pour commencer le jeu*/
+		
 		
 		comenzar();
 	
