@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title> Ecriture une fonction clock</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+
+var compteur_minutes=0;
+
+var compteur_heures=0;
+
+var indic=false;
+
+function tourne()
+		{
+			heures=document.getElementById("heures");
+			minutes=document.getElementById("minutes");
+		
+					 minutes.innerHTML = compteur_minutes*5;
+					
+			compteur_minutes=(compteur_minutes+1) % 12;
+			
+			
+			if (compteur_minutes==0){
+				compteur_heures=(compteur_heures+1) % 12;
+					 heures.innerHTML = compteur_heures+" :";	
+					 
+				}
+					
+			if (indic) window.setTimeout("tourne()", "100");
+		}
+
+/*function tourne(){
+	
+	
+		
+		switch(compteur_heures)
+		{
+			case 0:minutes.innerHTML=05;break;
+			case 1:minutes.innerHTML=10;break;
+			case 2:minutes.innerHTML=15;break;
+			case 3:minutes.innerHTML=20;break;
+			case 4:minutes.innerHTML=25;break;
+			case 5:minutes.innerHTML=30;break;
+			case 6:minutes.innerHTML=35;break;
+			case 7:minutes.innerHTML=40;break;
+			case 8:minutes.innerHTML=45;break;
+			case 9:minutes.innerHTML=50;break;
+			case 10: minutes.innerHTML=55;break;
+			case 11: minutes.innerHTML=0;break;
+	
+		}
+		
+		
+		compteur_heures=(compteur_heures+1)%12;
+	
+	
+	if (compteur_heures==0){
+		
+		switch(compteur_minutes)
+		{
+			case 0:heures.innerHTML=1+"  :";break;
+			case 1:heures.innerHTML=2+"  :";break;
+			case 2:heures.innerHTML=3+"  :";break;
+			case 3:heures.innerHTML=4+"  :";break;
+			case 4:heures.innerHTML=5+"  :";break;
+			case 5:heures.innerHTML=6+"  :";break;
+			case 6:heures.innerHTML=7+"  :";break;
+			case 7:heures.innerHTML=8+"  :";break;
+			case 8:heures.innerHTML=9+"  :";break;
+			case 9:heures.innerHTML=10+"  :";break;
+			case 10: heures.innerHTML=11+"  :";break;
+			case 11: heures.innerHTML=12+"  :";break;
+	
+		}
+		
+	
+		
+		
+		compteur_minutes=(compteur_minutes+1)%12;
+		
+		
+	}
+	
+	
+	
+	
+	if (indic) window.setTimeout("tourne()","100");
+}*/
+
+
+
+</script>
+</head>
+
+<body>
+<input type="button" value="lancer!" onclick="indic=true;tourne()"";><input type="button" value="Arreter!" onclick="indic=false"></input>
+<span id="heures">0 :</span>
+<span id="minutes">0</span>
+</body>
+</html>

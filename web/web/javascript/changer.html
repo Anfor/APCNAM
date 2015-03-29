@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<style>
+
+.test{
+	
+	color: red;
+}
+
+</style>
+
+
+<!--noeud.style.proprieteCss="valeur css";
+varx=document.get
+<form>
+
+<input type="button" value="tester !" onclick="changer();">
+</form>
+<p id="ici"> c'est ici que ça va changer ! </p>
+-->
+
+<title> Ecriture une fonction simple</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+
+function modif_paragraphe(){
+	
+	/*var c= document.getElementById("pa");
+	c.style.backgroundColor="red";*/
+	
+	
+	var n= document.getElementById('pa')
+	n.innerHTML='hhhiiiiiiiiiiiiii zdf zef f ;ze faz ze 0ze .zert azet aeztr ouhbdf ezrgf                 gggggggggggggggggggggggggazrazrg aezrt eart aetr aert gat aerg ';
+	
+	
+	
+}
+
+function centrage_h1(){
+	
+  var d=	document.getElementsByTagName("h1")[0];
+ 
+     d.setAttribute("class","test");
+  
+	 d.setAttribute("align", "center");
+}
+
+function changer(){
+	
+	var b=document.body;
+	
+	/*ici.style.color="red";*/
+	
+	b.style.color="blue";
+	b.style.color="red";
+	
+	
+}
+
+</script>
+<style>
+
+
+</style>
+</head>
+
+<body>
+
+<h1  onclick=modif_paragraphe();>Titre de la page <strong> principal</strong></h1>
+
+<p id="pa" onclick=centrage_h1();>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur nisl lacus, vel porta elit scelerisque nec. 
+Curabitur ultricies porttitor pretium. Vestibulum id vehicula mi, feugiat viverra tellus. 
+Nam sit amet gravida turpis. Donec nibh justo, pulvinar ac faucibus ac, fermentum nec est. 
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Vivamus id convallis dolor. Donec fermentum sagittis placerat. </p>
+
+
+
+
+</body>
+
+</html>

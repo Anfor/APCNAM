@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+<!--<p>cliquez sur le bouton pour lancer la fonction&nbsp;:<button onclick="estilo();">cambiar</button></p>-->
+
+</head>
+
+<body>
+<script type="text/javascript">
+
+
+
+
+function estilo(){
+	
+	//les 2 sont bons.
+	/*
+	var prueba=document.createElement("style");
+	var  tex=document.createTextNode("#pa {\nbackground-color:#323232;\nwidth:98%;\nheight:60px;\ndisplay:inline-block;\ncolor:red;} ");
+	prueba.appendChild(tex);
+	document.getElementsByTagName("head")[0].appendChild(prueba);
+	pa.innerHTML="Hello!";
+	*/
+	
+	
+	var test =document.createElement("style");
+	var texto=document.createTextNode("p{     background-color:#323232;        } ");
+	test.appendChild(texto);
+	document.getElementsByTagName("head")[0].appendChild(test);
+	
+	
+	
+	
+}
+</script>
+<p id="pa" onclick=estilo();> c'est ici que ça va changer ! </p>
+
+</body>
+</html>
