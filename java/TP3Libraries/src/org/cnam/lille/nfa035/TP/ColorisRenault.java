@@ -1,0 +1,6 @@
+package org.cnam.lille.nfa035.TP;
+
+public enum ColorisRenault {
+
+	RS_BLEU_MALTE, RS_NOIR_PROFOND, RS_GIVRE_NACRE, BLANC_GLACIER, GRIS_CASSIOPEE, GRIS_PLATINE, NOIR_ETOILE, ROUGE_VIF
+}
