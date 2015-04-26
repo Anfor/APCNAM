@@ -1,6 +1,6 @@
 package org.cnam.lille.nfa035.TP;
 
-public class Moteur {
+public abstract class Moteur {
 
 	 int type;
 	 int puissance;

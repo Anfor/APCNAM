@@ -5,9 +5,9 @@ public class ClioDiesel extends Voiture {
 	ColorisRenault coloris=ColorisRenault.ROUGE_VIF;
 	
 	public ClioDiesel(){
-		
-		MoteurDiesel mds=new MoteurDiesel();
-		
+		super();
+		mtr=new MoteurDiesel();
+	
 		this.vitesseMax=160;
 		this.consoType=5.5;
 		this.nbPlaces=4;
@@ -41,6 +41,12 @@ public class ClioDiesel extends Voiture {
 	public void setY(double arg0) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public int getTauxCO2() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
