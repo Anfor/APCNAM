@@ -1,19 +1,23 @@
 
 public class Compte {
 	
-	private static int counter=0;
+	private static int contador=0;
 	private float solde=0;
-	private int numero=0;
+	private  int numero=0;
 	
 	
 	public Compte(){
-		
-		Compte.counter++;
-	
-		this.numero++;
+		System.out.println("contador vale "+this.contador);
+		this.numero=Compte.contador;
+		Compte.contador++;
+
 	}
 	
 	
+	public int getContador() {
+		return Compte.contador;
+	}
+
 	void depot(float valeur){
 		
 		this.solde=this.solde+valeur;
@@ -36,6 +40,17 @@ public class Compte {
 	
 	void virer (float valeur, Compte destinataire){
 		
+		this.solde=this.solde - valeur;
 		
+		destinataire.depot(valeur);
 	}
+
+
+	public int  getNumero() {
+		return numero;
+	}
+
+
+	
+
 }

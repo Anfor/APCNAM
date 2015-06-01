@@ -11,6 +11,7 @@ public class Client {
 	public Client(String nom){
 		
 		this.nom=nom;
+		ajouterCompte();
 	}
 	
 	String getNom(){
@@ -19,11 +20,12 @@ public class Client {
 	}
 	
 	Compte ajouterCompte(){
-		
-		cuentas[nbc]=new Compte();
+	
+		cuentas[nbComptes]=new Compte();
+			this.nbComptes++;
 		nbc++;
-		nbComptes=nbc;
-		return cuentas[nbc];
+		
+		return cuentas[nbComptes-1];
 	}
 	
 	float getSolde(){
