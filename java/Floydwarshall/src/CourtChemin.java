@@ -122,7 +122,7 @@ public class CourtChemin {
         System.out.println("\nMatrice d'adjacence");
     
         dessinerMatrice(m);
-       // camino(m);
+     
     	
     	menu();
     }
