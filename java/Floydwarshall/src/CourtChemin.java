@@ -76,14 +76,12 @@ public class CourtChemin {
 
              for (int j = 0; j < V; j++){
             	 
-            	 Scanner sca = new Scanner(System.in);
+            	 
             	
             	 if(i==j){		//la diagonal est toujours 0
             		 System.out.println("C'est neccesaire d'ecrire 0 en cette case, pour eviter de soucis \n "
             		 		+ "on fera automatiquement ["+i+"] ["+j+"]"+" ");
             		
-            		
-            		 
             		 m[i][j]=0;
             		 System.out.println("");
             	 }
@@ -96,10 +94,13 @@ public class CourtChemin {
 						
             		 System.out.println("On introduit  ["+i+"] ["+j+"]"+" si on veux ecrire de l'infini, "
             		  		+ "il faut ecrire une lettre:");
+            		 
             			    System.out.println("");
+            			    Scanner sca = new Scanner(System.in);
             			    	valor = sca.nextLine();
-					} while (!(valor.matches("[a-zA-Z]+"))|(!(valor.matches("[0-9]+"))));//pour eviter characteres speciaux
-            	
+            			   
+					} while (!valor.matches("[a-zA-Z]+") & !valor.matches("[0-9]+"));//pour eviter characteres speciaux
+            		 			
             			  if(valor.matches("[0-9]+")){
                 			  
                 			  m[i][j] = Integer.parseInt(valor);
@@ -121,10 +122,12 @@ public class CourtChemin {
         System.out.println("\nMatrice d'adjacence");
     
         dessinerMatrice(m);
+       // camino(m);
     	
     	menu();
     }
     
+ 
     /**
      * 
      * 
@@ -135,6 +138,7 @@ public class CourtChemin {
     	
     	
     		System.out.println("1- Pour donner la matrice du graph ");
+    		
     		System.out.println("2- pour sortir");
     	Scanner scc = new Scanner(System.in);
        
@@ -150,6 +154,8 @@ public class CourtChemin {
     		grapho();
 			
 			break;
+			
+		
 			
 		case 2:			
     		 		System.out.println("à bientôt!");
