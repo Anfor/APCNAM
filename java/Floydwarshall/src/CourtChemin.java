@@ -122,7 +122,7 @@ public class CourtChemin {
         System.out.println("\nMatrice d'adjacence");
     
         dessinerMatrice(m);
-     
+       
     	
     	menu();
     }
@@ -137,16 +137,17 @@ public class CourtChemin {
     private static void menu(){
     	
     	
-    		System.out.println("1- Pour donner la matrice du graph ");
+    		System.out.println("1- Pour donner la matrice du graphe ");
     		
-    		System.out.println("2- pour sortir");
-    	Scanner scc = new Scanner(System.in);
+    		
+    		System.out.println("2- Pour quitter");
+    		Scanner scc = new Scanner(System.in);
        
-    String ch = scc.nextLine();
+    		String ch = scc.nextLine();
     
-    if (ch.matches("[0-9]+")){//si on reentre pas une nombre on répéte
+    		if (ch.matches("[0-9]+")){//si on reentre pas une nombre on répéte
     	
-     int choix= Integer.parseInt(ch);	
+    			int choix= Integer.parseInt(ch);	
     	
     	switch (choix) {
 		case 1:
@@ -154,7 +155,6 @@ public class CourtChemin {
     		grapho();
 			
 			break;
-			
 		
 			
 		case 2:			
