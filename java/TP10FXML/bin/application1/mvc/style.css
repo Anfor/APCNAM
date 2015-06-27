@@ -1,0 +1,25 @@
+.label {
+	-fx-font: 16px "Arial Black";
+}
+
+#titre {
+	-fx-text-fill: red;
+	-fx-font: 100px "Arial Black";
+	-fx-effect: dropshadow( gaussian , red , 16 , 0.4 , 1 , 1 );
+}
+
+.text {
+	-fx-text-alignment: justify;
+}
+
+#boutonsbas {
+	-fx-hgap: 30px;
+	-fx-vgap: 2px;
+	-fx-alignment: center;
+}
+
+#boutonsbas .button {
+	-fx-background-color: linear-gradient(#ff5400, #be1d00);
+	-fx-text-fill: white;
+	-fx-padding: 20 50 20 50;
+}

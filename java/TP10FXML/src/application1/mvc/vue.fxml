@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.textfield.*?>
+
+<BorderPane fx:controller="application1.mvc.Controleur" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+	<center>
+		<VBox>
+			<children>
+				<Label id="titre" fx:id="titre" text="Bonjour !"/>
+				<Separator/>
+				<Label text="Les Etapes"/>
+				<Separator/>
+				<ListView fx:id="listView"/>
+			</children>
+		</VBox>
+	</center>
+	<right>
+		<VBox>
+			<children>
+				<Button text="A"/>
+				<Button text="B"/>
+				<Button text="C"/>
+				<Button text="D"/>
+				<Button text="E"/>
+				<Button text="F"/>
+			</children>
+		</VBox>
+	</right>
+	<bottom>
+		<GridPane id="boutonsbas" fx:id="boutonsbas">
+				<Button text="Un" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+				<Button text="Deux" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+				<Button text="Trois" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+				<Button text="Quatre" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+				<Button text="Cinq" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+				<Button text="Six" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+				<Button text="Sept" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+				<Button text="Huit" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+				<Button text="Neuf" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+				<Button text="Dix" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+				<Button text="Onze" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+				<Button onAction="#gererClic" text="Quitter" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+		</GridPane>
+	</bottom>
+</BorderPane>

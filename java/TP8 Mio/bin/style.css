@@ -1,0 +1,10 @@
+#label1{
+-fx-text-fill: red;
+-fx-font: 60px "Arial Black";
+-fx-effect: dropshadow( gaussian , red , 16,0.4,1,1 );
+}
+
+#grid .button{
+	-fx-background-color: linear-gradient(#ff4500, #be1d00);
+
+}
