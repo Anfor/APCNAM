@@ -5,10 +5,10 @@ package application;
 
 
 import java.net.URL;
+
+
+import java.sql.SQLException;
 import java.util.ResourceBundle;
-
-
-
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,11 +33,16 @@ import javafx.stage.Stage;
 public class Controlador implements Initializable {
 	
 	
-	
+	MostrarBd mb = new MostrarBd();
 	
 	private Principal principal;
+	private int contador=0;
+	int index=0;
 	
 	
+	
+
+
 	//text fields
 	@FXML
 	private  TextField nombre = new TextField();
@@ -64,12 +69,22 @@ public class Controlador implements Initializable {
 	@FXML
 	private Button supprimerb = new Button();
 	
-
+	@FXML
+	private Button retro = new Button();
+	
+	@FXML
+	private Button avant = new Button();
+	
+	@FXML
+	private Button eliminar = new Button();
+	
 	
 	//area 
 	
 	@FXML
 	private  TextArea areaTexto = new TextArea();
+	
+
 	
 	
 	@FXML
@@ -88,7 +103,7 @@ public class Controlador implements Initializable {
          Stage stage = new Stage();
         
          
-         stage.setTitle("Ventana Aviso");
+         stage.setTitle("Nouvelle Base des donées");
          stage.setScene(new Scene(page2));  
          stage.setResizable(false);
          stage.show();
@@ -97,9 +112,8 @@ public class Controlador implements Initializable {
 		
 	   }  
 	 
-	
+	 
 
-		
 	
 /**
  * 
@@ -112,16 +126,16 @@ public class Controlador implements Initializable {
 	@FXML
 	public void botonAjouter(ActionEvent event) throws Exception{
 		
-		
-		
-	
-		
+			
 		GuardarBase.apellidobd=apellido.getText();
 		GuardarBase.nombrebd=nombre.getText();
 		GuardarBase.telefonobd=telefono.getText();
 		GuardarBase.emailbd=email.getText();
 		GuardarBase.direccionbd=direccion.getText();
 		GuardarBase.main(null);
+		
+		
+		areaTexto.setText("Données stockées\n"+areaTexto.getText());
 		
 		GuardarBase.apellidobd=null;
 		GuardarBase.nombrebd=null;
@@ -130,33 +144,146 @@ public class Controlador implements Initializable {
 		GuardarBase.direccionbd=null;
 		
 		
+		limpiar(event);
+		
+		
+	}
 	
+	
+	@FXML
+	public void limpiar (ActionEvent event) throws Exception{
+		
+		
+
+		nombre.setText(null);
+		apellido.setText(null);
+		telefono.setText(null);
+		email.setText(null);
+		direccion.setText(null);
+		MostrarBd.listapersona.clear();
+		
+	}
+	
+	@FXML
+	public void botonModifier(ActionEvent event){
+		
+
+		
+		ModificarBd.apellidoCambiado=apellido.getText();
+		ModificarBd.nombreCambiado=nombre.getText();
+		ModificarBd.telefonoCambiado=telefono.getText();
+		ModificarBd.emailCambiado=email.getText();
+		ModificarBd.direccionCambiado=direccion.getText();
+		
+		try {
+			ModificarBd.main(null);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		nombre.setText(null);
 		apellido.setText(null);
 		telefono.setText(null);
 		email.setText(null);
 		direccion.setText(null);
 		
-	
-	}
-	
-	@FXML
-	public void botonModifier(ActionEvent event){
-		
-		
+		areaTexto.setText("Contact modifié\n"+areaTexto.getText());
 	}
 	
 	
 	@FXML
-	public void botonRechercher(ActionEvent event) throws Exception{
-		MostrarBd.main(null);
+	public void botonRechercher(ActionEvent event) {
+		
+
+		
+		if (mb.getApellidoBuscado()!=null) {
+			
+			mb.setApellidoBuscado(null);
+			
+		}
+		
+		index=0;
+		
+		mb.setApellidoBuscado(apellido.getText());
+		try {
+			MostrarBd.main(null);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		if (MostrarBd.listapersona.isEmpty()) {
+			nombre.setText(null);
+			apellido.setText(null);
+			telefono.setText(null);
+			email.setText(null);
+			direccion.setText(null);
+		}
+		
+		
+		apellido.setText(MostrarBd.listapersona.get(index).resultadoApellido);
+		nombre.setText(MostrarBd.listapersona.get(index).resultadoNombre);
+		telefono.setText(MostrarBd.listapersona.get(index).resultadoTelefono);
+		email.setText(MostrarBd.listapersona.get(index).resultadoEmail);
+		direccion.setText(MostrarBd.listapersona.get(index).resultadoDireccion);
+		
+		
+		areaTexto.setText(MostrarBd.listapersona.size()+" résultats\n"+areaTexto.getText());
+
+		
+	}
+	
+	@FXML
+	public void botonAvant(ActionEvent event){
+		
+
+		
+		try {
+			index++;
+			
+			apellido.setText(MostrarBd.listapersona.get(index).resultadoApellido);
+			nombre.setText(MostrarBd.listapersona.get(index).resultadoNombre);
+			telefono.setText(MostrarBd.listapersona.get(index).resultadoTelefono);
+			email.setText(MostrarBd.listapersona.get(index).resultadoEmail);
+			direccion.setText(MostrarBd.listapersona.get(index).resultadoDireccion);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		index=MostrarBd.listapersona.size()-1;
+		}
+		
+		
+		
 		
 		
 	}
 	
-	public String getAreaTexto() {
-		return areaTexto.getText();
+	@FXML
+	public void botonRetro(ActionEvent event){
+		
+	
+		try {
+			
+			index--;
+			apellido.setText(MostrarBd.listapersona.get(index).resultadoApellido);
+			nombre.setText(MostrarBd.listapersona.get(index).resultadoNombre);
+			telefono.setText(MostrarBd.listapersona.get(index).resultadoTelefono);
+			email.setText(MostrarBd.listapersona.get(index).resultadoEmail);
+			direccion.setText(MostrarBd.listapersona.get(index).resultadoDireccion);
+			
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			index=0;
+		}
+		
+		
+		
 	}
+	
+	
+
 
 
 
@@ -165,25 +292,42 @@ public class Controlador implements Initializable {
 	@FXML
 	public void botonSupprimer(ActionEvent event){
 		
+		EliminarContacto.apellidoEliminado=apellido.getText();
+		
+		
+		try {
+			EliminarContacto.main(null);
+			limpiar(event);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		areaTexto.setText("Contact effacé\n"+areaTexto.getText());
 		
 	}
+	
+	public String getAreaTexto() {
+		return areaTexto.getText();
+	}
+	
 	
 	public void setTextArea(String texto){
 		
-		areaTexto.setText(texto);
+		areaTexto.setText(texto+"\n");
 		
 	}
-	
+		
 	
 	 public void setMainApp(Principal mainApp) {
 	        this.principal = mainApp;
 	 }
-	
+
 	
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		areaTexto.setEditable(false);
-		areaTexto.setText(null);
+		areaTexto.setText("");
 		nombre.setText(null);
 		apellido.setText(null);
 		telefono.setText(null);

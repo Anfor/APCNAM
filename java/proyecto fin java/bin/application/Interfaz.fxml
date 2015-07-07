@@ -32,5 +32,8 @@
           </Menu>
         </menus>
       </MenuBar>
+      <Button fx:id="retro" layoutX="336.0" layoutY="87.0" mnemonicParsing="false" onAction="#botonRetro" prefHeight="25.0" prefWidth="29.0" text="&lt;" />
+      <Button fx:id="avant" layoutX="372.0" layoutY="87.0" mnemonicParsing="false" onAction="#botonAvant" prefHeight="25.0" prefWidth="35.0" text="&gt;" />
+      <Button fx:id="eliminar" layoutX="339.0" layoutY="148.0" mnemonicParsing="false" onAction="#limpiar" text="effacer" />
    </children>
 </AnchorPane>

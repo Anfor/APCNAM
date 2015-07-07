@@ -10,6 +10,6 @@
    <children>
       <Button fx:id="buttonYes" onAction="#botonSi" layoutX="64.0" layoutY="125.0" mnemonicParsing="false" prefHeight="15" prefWidth="90"  text="si" />
       <Button fx:id="buttonNot" onAction="#botonNot" layoutX="261.0" layoutY="125.0" mnemonicParsing="false" prefHeight="15" prefWidth="90" text="no" />
-      <Text layoutX="101.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quieres crear una nueva agenda, el proceso elimina la anterior si existe" wrappingWidth="193.654296875" />
+      <Text layoutX="101.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voulez vous créer une nouvelle base des données, le processus  effacera l'ancienne base des données " wrappingWidth="193.654296875" />
    </children>
 </AnchorPane>

@@ -6,7 +6,7 @@ package application;
 
 import java.io.IOException;
 
-import javax.sound.midi.ControllerEventListener;
+
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +20,7 @@ public class Principal extends Application {
 	
 	private Stage primaryStage;
 	AnchorPane page = null;
-	static String texto;
+//	static String texto;
 	static Controlador controller=new Controlador();
 	
 	@Override
@@ -36,7 +36,7 @@ public class Principal extends Application {
 		
 		
 		
-		controller.setTextArea(texto);
+	//	controller.setTextArea(texto);
 	}
 	
 	
@@ -59,7 +59,7 @@ public class Principal extends Application {
 		
 try {
 			
-	     //  page = (AnchorPane)FXMLLoader.load(Principal.class.getResource("Interfaz.fxml"));
+	    
 			
 			Scene scene = new Scene(page);
 			primaryStage.setScene(scene);

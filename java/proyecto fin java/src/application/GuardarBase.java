@@ -18,7 +18,7 @@ public class GuardarBase {
 	 static String telefonobd=null;
 	 static String emailbd=null;
 	 static String direccionbd=null;
-	 private static String area;
+	// private static String area;
 	 
 
 	public static void main(String[] args) throws Exception {
@@ -30,9 +30,9 @@ public class GuardarBase {
 		   stat = conn.createStatement();
 		     
 			 prep = conn.prepareStatement("insert into people values (?, ?, ?, ?, ?);");
-		
-		      prep.setString(1, nombrebd);
-		      prep.setString(2, apellidobd);
+			 	
+			  prep.setString(1, apellidobd);
+		      prep.setString(2, nombrebd);
 		      prep.setString(3, telefonobd);
 		      prep.setString(4, emailbd);
 		      prep.setString(5, direccionbd);
@@ -45,17 +45,17 @@ public class GuardarBase {
 		      prep.executeBatch();
 		      conn.setAutoCommit(true);
 		      
-		    area=(String) Principal.controller.getAreaTexto();
+		/*    area=(String) Principal.controller.getAreaTexto();
 		      
 		     if (area!=null) {
 		    	 
-		    	 area=area+"\nBase de datos guardada";
+		    	 area=area+"\nDonnées stockées";
 		    	 
 		    	 Principal.controller.setTextArea(area);
 			} else {
-				Principal.controller.setTextArea("Base de datos guardada");
+				Principal.controller.setTextArea("Données stockées");
 			}
-		        
+		        */
 		     
 		    
 		  
